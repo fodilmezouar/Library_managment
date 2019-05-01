@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="702.0" prefWidth="1034.0" style="-fx-background-color: #CCCCCC;" stylesheets="@../css/DarHaditCss.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="darhadit.Notification.NotificationController">
+   <children>
+        <BorderPane prefHeight="607.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <center>
+                <AnchorPane>
+                    <children>
+                        <VBox layoutX="822.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="534.0" styleClass="paneMain" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <HBox alignment="TOP_CENTER" prefHeight="69.0">
+                                    <children>
+                                        <ImageView fitHeight="33.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                            <HBox.margin>
+                                                <Insets left="4.0" top="22.0" />
+                                            </HBox.margin>
+                                 <image>
+                                    <Image url="@../images/icons8-view_file_filled.png" />
+                                 </image>
+                                        </ImageView>
+                                        <JFXTextField fx:id="text" focusColor="#a67c52" labelFloat="true" onAction="#Recheche" onKeyPressed="#Recheche_v2" prefHeight="32.0" prefWidth="357.0" promptText="بحث" unFocusColor="#402312">
+                                            <font>
+                                                <Font name="Franklin Gothic Book" size="17.0" />
+                                            </font>
+                                            <HBox.margin>
+                                                <Insets left="11.0" top="20.0" />
+                                            </HBox.margin>
+                                        </JFXTextField>
+                                    </children>
+                                </HBox>
+                         
+                                            <TableView fx:id="List" VBox.vgrow="ALWAYS">
+                                    <columns>
+                                        <TableColumn fx:id="idadh" minWidth="89.0" prefWidth="-1.0" text="رقم العضو" />
+                                        <TableColumn fx:id="nom_prenom" minWidth="70.0" prefWidth="-1.0" text="اسم و اللقب" />
+                                        <TableColumn fx:id="num" minWidth="100.0" prefWidth="-1.0" text="الهاتف" />
+                                        <TableColumn fx:id="email" minWidth="50.0" prefWidth="-1.0" text="البريد الالكتروني" />
+                                        <TableColumn fx:id="addresse" minWidth="50.0" prefWidth="-1.0" text="مكان السكن" />
+                                        <TableColumn fx:id="job" minWidth="50.0" prefWidth="-1.0" text="المهنة" />
+                                        <TableColumn fx:id="iddoc" minWidth="90.0" prefWidth="-1.0" text="رقم الوثيقة" />
+                                        <TableColumn fx:id="idcopy" minWidth="100.0" prefWidth="-1.0" text="رقم النسخة" />
+                                        <TableColumn fx:id="retards" minWidth="70.0" prefWidth="-1.0" text="عدد ايام التاخر" />
+                                    </columns>
+                                    <columnResizePolicy>
+                                        <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                                    </columnResizePolicy>
+                           <contextMenu>
+                              <ContextMenu>
+                                <items>
+                                  <MenuItem mnemonicParsing="false" onAction="#rendre" text="اعادة الكتاب" />
+                                    <MenuItem mnemonicParsing="false" onAction="#Supprimer" text="حدف الكتاب" />
+                                </items>
+                              </ContextMenu>
+                           </contextMenu> 
+                                </TableView>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </center>
+            <top>
+                <AnchorPane>
+                    <children>
+                  <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                              <HBox alignment="CENTER" prefHeight="43.0" prefWidth="230.0">
+                                  <children>
+                                      <Label alignment="CENTER" contentDisplay="TOP" nodeOrientation="RIGHT_TO_LEFT" text="إشعارات" textFill="#402312">
+                                          <font>
+                                              <Font name="Calibri" size="33.0" />
+                                          </font>
+                                          <HBox.margin>
+                                              <Insets right="10.0" />
+                                          </HBox.margin>
+                                      </Label>
+                                      <ImageView fitHeight="41.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                          <image>
+                                              <Image url="@../images/icons8-edit_property_filled.png" />
+                                          </image>
+                                      </ImageView>
+                                  </children>
+                              </HBox>
+                        <JFXButton onAction="#backToDash" onMouseClicked="#backToDash" prefHeight="54.0" prefWidth="133.0" text="رجوع" textFill="#5b0c0c">
+                           <graphic>
+                              <ImageView fitHeight="44.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8-circled_chevron_left_filled.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Calibri" size="24.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                        <VBox alignment="CENTER" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <children>
+                                <ImageView fitHeight="51.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../images/dar.png" />
+                                    </image>
+                                </ImageView>
+                                <Label prefHeight="39.0" text="مكتبة دار الحديث" textFill="#402312">
+                                    <font>
+                                        <Font name="Calibri" size="17.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </children>
+                </AnchorPane>
+            </top>
+        </BorderPane>
+   </children>
+</AnchorPane>

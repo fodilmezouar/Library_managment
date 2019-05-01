@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="711.0" prefWidth="1234.0" stylesheets="@../css/DarHaditCss.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="darhadit.GestionMember.FXMLgestionMemberController">
+   <children>
+      <BorderPane layoutX="-7.0" prefHeight="711.0" prefWidth="1097.0" style="-fx-background-color: #CCCCCC;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="-7.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="107.0" prefWidth="1150.0">
+               <children>
+                  <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="TOP" nodeOrientation="RIGHT_TO_LEFT" prefHeight="43.0" prefWidth="188.0" text="إدارة الأعضاء" textFill="#402312">
+                                 <font>
+                                    <Font name="Calibri" size="33.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fitHeight="42.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8-conference_filled.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <JFXButton onAction="#backToDash" onMouseClicked="#backToDash" prefHeight="54.0" prefWidth="133.0" text="رجوع" textFill="#5b0c0c">
+                           <graphic>
+                              <ImageView fitHeight="44.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8-circled_chevron_left_filled.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Calibri" size="24.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="51.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/dar.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="39.0" prefWidth="101.0" text="مكتبة دار الحديث" textFill="#402312">
+                           <font>
+                              <Font name="Calibri" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <right>
+            <AnchorPane styleClass="paneMain" BorderPane.alignment="CENTER">
+               <children>
+                  <VBox alignment="CENTER" layoutX="24.0" layoutY="24.0" prefHeight="578.0" prefWidth="205.0" styleClass="text-input-gestion" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <JFXTextField fx:id="num" alignment="CENTER" disable="true" focusColor="#a45527" nodeOrientation="RIGHT_TO_LEFT" promptText="رقم العضو" unFocusColor="#402312" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Franklin Gothic Book" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="8.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="nom" alignment="CENTER" focusColor="#a45527" layoutX="10.0" layoutY="10.0" nodeOrientation="RIGHT_TO_LEFT" promptText="اسم العضو" unFocusColor="#402312" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Franklin Gothic Book" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="6.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="prenom" alignment="CENTER" focusColor="#a45527" layoutX="10.0" layoutY="51.0" nodeOrientation="RIGHT_TO_LEFT" promptText="لقب العضو" unFocusColor="#402312" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Franklin Gothic Book" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="6.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXComboBox fx:id="sexe" focusColor="#a45527" nodeOrientation="RIGHT_TO_LEFT" prefHeight="36.0" prefWidth="188.0" promptText="الجنس" unFocusColor="#402312" />
+                        <JFXDatePicker fx:id="dateNaissance" defaultColor="#5b4e0d" nodeOrientation="RIGHT_TO_LEFT" promptText="تاريخ الميلاد" VBox.vgrow="ALWAYS" />
+                        <JFXTextField fx:id="lieuNaissance" alignment="CENTER" focusColor="#a45527" nodeOrientation="RIGHT_TO_LEFT" promptText="مكان الميلاد" unFocusColor="#402312" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Franklin Gothic Book" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="6.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXDatePicker fx:id="dateJointeur" defaultColor="#5b4e0d" layoutX="10.0" layoutY="174.0" nodeOrientation="RIGHT_TO_LEFT" promptText="تاريخ الانخراط" />
+                        <JFXTextField fx:id="addressPersonel" alignment="CENTER" focusColor="#a45527" nodeOrientation="RIGHT_TO_LEFT" promptText="العنوان الشخصي" unFocusColor="#402312" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Franklin Gothic Book" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="6.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="addressElectronique" alignment="CENTER" focusColor="#a45527" nodeOrientation="RIGHT_TO_LEFT" promptText="العنوان الاكتروني" unFocusColor="#402312" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Franklin Gothic Book" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="6.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="numTel" alignment="CENTER" focusColor="#a45527" nodeOrientation="RIGHT_TO_LEFT" promptText="رقم الهاتف" unFocusColor="#402312" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Franklin Gothic Book" size="18.0" />
+                           </font>
+                           <VBox.margin>
+                              <Insets top="6.0" />
+                           </VBox.margin>
+                        </JFXTextField>
+                        <JFXTextField fx:id="profession" alignment="CENTER" focusColor="#a45527" nodeOrientation="RIGHT_TO_LEFT" promptText="المهنة" unFocusColor="#402312" VBox.vgrow="ALWAYS">
+                           <font>
+                              <Font name="Franklin Gothic Book" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXTextField fx:id="numExemplairePossible" alignment="CENTER" disable="true" focusColor="#a45527" layoutX="10.0" layoutY="350.0" nodeOrientation="RIGHT_TO_LEFT" unFocusColor="#402312">
+                           <font>
+                              <Font name="Franklin Gothic Book" size="18.0" />
+                           </font>
+                        </JFXTextField>
+                        <VBox alignment="BOTTOM_LEFT" prefHeight="91.0" prefWidth="182.0">
+                           <children>
+                              <HBox prefHeight="54.0" prefWidth="189.0" VBox.vgrow="ALWAYS">
+                                 <children>
+                                    <JFXButton fx:id="modifier" contentDisplay="TOP" disable="true" onAction="#modfierAdherent" prefHeight="69.0" prefWidth="224.0" text="تعديل" textFill="#462b12" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Cambria" size="22.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="29.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8-edit_administrator_filled.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="ajouter" contentDisplay="TOP" onAction="#ajouterAdherent" prefHeight="69.0" prefWidth="224.0" text="إضافة" textFill="#46290d" HBox.hgrow="ALWAYS">
+                                       <font>
+                                          <Font name="Cambria" size="22.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8-add_user.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                              <HBox>
+                                 <children>
+                                    <JFXButton contentDisplay="TOP" onAction="#CancelButton" prefHeight="69.0" prefWidth="224.0" text="إلغاء" textFill="#46290d">
+                                       <font>
+                                          <Font name="Cambria" size="22.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8-cancel_filled.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                    <JFXButton fx:id="reactive1" contentDisplay="TOP" disable="true" onAction="#reactive" prefHeight="69.0" prefWidth="224.0" text="تجديد" textFill="#46290d">
+                                       <font>
+                                          <Font name="Cambria" size="22.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="33.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8-recycle_sign_filled.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </JFXButton>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </VBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </right>
+         <center>
+            <AnchorPane>
+               <children>
+                  <VBox alignment="CENTER" layoutX="906.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="610.0" prefWidth="906.0" styleClass="paneMain" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="69.0" prefWidth="902.0">
+                           <children>
+                              <ImageView fitHeight="33.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8-find_user_filled.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="4.0" top="22.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <JFXTextField fx:id="Search" focusColor="#a45527" prefHeight="32.0" prefWidth="357.0" promptText="بحث" unFocusColor="#402312">
+                                 <font>
+                                    <Font name="Franklin Gothic Book" size="17.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="11.0" top="20.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tableView" prefHeight="519.0" prefWidth="929.0" VBox.vgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="numAd" minWidth="8.0" prefWidth="-1.0" text="رقم العضو" />
+                              <TableColumn fx:id="nomAd" prefWidth="62.0" text="الاسم" />
+                              <TableColumn fx:id="prenomAd" prefWidth="-1.0" text="اللقب" />
+                              <TableColumn fx:id="dateNa" minWidth="15.0" prefWidth="-1.0" text="تاريخ الميلاد" />
+                              <TableColumn fx:id="lieuNa" minWidth="20.0" prefWidth="-1.0" text="مكان الميلاد" />
+                              <TableColumn fx:id="addressAd" minWidth="50.0" prefWidth="-1.0" text="العنوان الشخصي" />
+                              <TableColumn fx:id="addressEl" minWidth="40.0" prefWidth="-1.0" text="العنوان الاكتروني" />
+                              <TableColumn fx:id="numTelf" minWidth="20.0" prefWidth="-1.0" text="رقم الهاتف" />
+                              <TableColumn fx:id="dateJoin" minWidth="15.0" prefWidth="76.0" text="تاريخ الانخراط" />
+                              <TableColumn fx:id="proffes" minWidth="20.0" prefWidth="73.0" text="المهنة" />
+                              <TableColumn fx:id="dateRenouv" minWidth="15.0" prefWidth="75.0" text="تاريخ التجديد" />
+                           </columns>
+                           <contextMenu>
+                              <ContextMenu>
+                                 <items>
+                                    <MenuItem mnemonicParsing="false" onAction="#ListMemoAdherent" text="تعليقات" />
+                                 </items>
+                              </ContextMenu>
+                           </contextMenu>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

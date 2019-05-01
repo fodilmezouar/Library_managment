@@ -1,0 +1,81 @@
+
+.table-view{
+    /*-fx-background-color: transparent;*/
+ }
+
+
+.table-view:focused{
+    /*-fx-background-color: transparent;*/
+}
+
+
+
+
+.table-view .column-header {
+     -fx-background-color: transparent;
+} 
+
+
+.table-view .column-header-background{
+    -fx-background-color:  #703B3B;
+}
+
+
+.table-view .column-header-background .label{
+     -fx-background-color: transparent; 
+    -fx-font-weight:bold;
+    -fx-text-fill: white;
+}
+
+
+.table-view .table-column{
+    -fx-alignment:center;
+}
+
+
+.table-view .table-cell{
+    -fx-font-size:12px; 
+    -fx-font-family:GE_SS_Unique_Light;
+     -fx-text-fill:black; 
+}
+
+ .table-row-cell{
+    -fx-background-color: white;
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em; 
+}
+
+
+.table-row-cell:odd{
+    -fx-background-color: #CCCCCC;
+    -fx-background-insets: 0.0, 0.0 0.0 1.0 0.0;
+    -fx-padding: 0.0em;  
+}
+
+
+.table-row-cell:selected {
+   /* -fx-border-color:transparent firebrick transparent firebrick  ;
+    -fx-border-width:2.0; */
+}
+
+
+
+.table-row-cell:hover {
+    -fx-background-color:#a67c52;
+}
+
+.table-row-cell:focused {
+    -fx-background-color: #a67c52;
+}
+.table-view .column-header, .table-view .filler {
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-family:GE_SS_Unique_Light;
+}
+.paneMain {
+-fx-border-color: #402312;
+-fx-border-insets: 5;
+-fx-border-width: 3;
+-fx-border-style: solid;
+-fx-border-radius:2px;
+}

@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="702.0" prefWidth="1149.0" style="-fx-background-color: #CCCCCC;" stylesheets="@../css/DarHaditCss.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="darhadit.dashboard.DashboardController">
+   <children>
+      <BorderPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <right>
+            <VBox BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane>
+                     <children>
+                        <VBox alignment="CENTER" layoutY="5.0">
+                           <children>
+                              <ImageView fitHeight="91.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/dar.png" />
+                                 </image>
+                              </ImageView>
+                              <Label alignment="CENTER" prefHeight="24.0" prefWidth="206.0" text="مكتبة دار الحديث">
+                                 <font>
+                                    <Font name="Franklin Gothic Book" size="20.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+                  <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="240.0" maxHeight="-Infinity" onMouseClicked="#openNotification" prefHeight="67.0" prefWidth="205.0" text="إشعارات" textFill="#402312">
+                     <font>
+                        <Font name="Calibri" size="22.0" />
+                     </font>
+                     <graphic>
+                        <VBox alignment="CENTER">
+                           <children>
+                              <VBox alignment="CENTER_RIGHT">
+                                 <children>
+                                    <Label fx:id="notification" alignment="CENTER" contentDisplay="CENTER" prefHeight="22.0" prefWidth="20.0" text="0" textFill="WHITE" visible="false">
+                                       <font>
+                                          <Font name="Calibri" size="16.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="21.0" fitWidth="23.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../images/icons8-filled_circle_filled.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8-appointment_reminders_filled.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </VBox>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton fx:id="open" contentDisplay="TOP" maxHeight="-Infinity" onMouseClicked="#openGestionMember" prefHeight="76.0" prefWidth="205.0" text="إدارة الأعضاء" textFill="#402312">
+                     <font>
+                        <Font name="Calibri" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-conference_filled.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="TOP" maxHeight="-Infinity" onMouseClicked="#openAddDocument" prefHeight="76.0" prefWidth="205.0" text="إضافة وثيقة" textFill="#402312">
+                     <font>
+                        <Font name="Calibri" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-add_book.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="357.0" maxHeight="-Infinity" onMouseClicked="#openListDocument" prefHeight="76.0" prefWidth="205.0" text="قائمة الوثائق" textFill="#402312">
+                     <font>
+                        <Font name="Calibri" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-book_shelf_filled.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="454.0" maxHeight="-Infinity" onMouseClicked="#openDocumentEmprunts" prefHeight="76.0" prefWidth="205.0" text="الوثائق المستعارة" textFill="#402312">
+                     <font>
+                        <Font name="Calibri" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-to_do_filled.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="TOP" maxHeight="-Infinity" onMouseClicked="#openStatistiques" prefHeight="76.0" prefWidth="205.0" text="إحصائيات" textFill="#402312">
+                     <font>
+                        <Font name="Calibri" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-combo_chart_filled.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+                  <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="638.0" maxHeight="-Infinity" onMouseClicked="#openParametre" prefHeight="76.0" prefWidth="205.0" text="إعدادات" textFill="#402312">
+                     <font>
+                        <Font name="Calibri" size="22.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/icons8-settings_filled.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </JFXButton>
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <JFXTabPane nodeOrientation="RIGHT_TO_LEFT" BorderPane.alignment="CENTER">
+               <tabs>
+                  <Tab text="عملية الإعارة">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox alignment="CENTER" layoutX="-2.0" layoutY="50.0" prefHeight="633.0" prefWidth="768.0" spacing="50.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <Pane prefHeight="226.0" prefWidth="719.0" styleClass="pane">
+                                       <children>
+                                          <VBox prefHeight="224.0" prefWidth="748.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="346.0">
+                                                         <HBox.margin>
+                                                            <Insets left="-62.0" right="31.0" />
+                                                         </HBox.margin>
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT">
+                                                               <children>
+                                                                  <Label fx:id="titre" text="إسم الوثيقة" textFill="#402312">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="21.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label fx:id="nomCategorie" text="تخصص" textFill="#402312">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="21.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label fx:id="nombreExemplaire" text="النسخ المتاحة\جميع النسخ" textFill="#402312">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="21.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <JFXTextField fx:id="idDocument" focusColor="#402312" labelFloat="true" onAction="#tremplirFormulaireDocument" onKeyPressed="#just_number" onKeyReleased="#viderFormulaireDocument" prefHeight="27.0" prefWidth="315.0" promptText="رقم الوثيقة" unFocusColor="#a67c52">
+                                                         <HBox.margin>
+                                                            <Insets left="-31.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Gurmukhi MN" size="17.0" />
+                                                         </font>
+                                                      </JFXTextField>
+                                                   </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                                                   <children>
+                                                      <HBox alignment="BOTTOM_LEFT" prefHeight="100.0" prefWidth="343.0">
+                                                         <HBox.margin>
+                                                            <Insets left="-62.0" right="31.0" />
+                                                         </HBox.margin>
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT">
+                                                               <children>
+                                                                  <Label fx:id="emplacementExemplaire" text="مكان النسخة | الرقم في الفئة" textFill="#402312">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="21.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label fx:id="disponibleExemplaire" layoutX="10.0" layoutY="43.0" text="إتاحة" textFill="#402312">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="21.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label fx:id="empruntableExemplaire" layoutX="10.0" layoutY="60.0" text="للإقراض" textFill="#402312">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="21.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <JFXTextField fx:id="idExemplaire" focusColor="#402312" labelFloat="true" onAction="#remplirFormulaireExemplaire" onKeyPressed="#just_number" onKeyReleased="#viderFormulaireExemplaire" prefHeight="27.0" prefWidth="315.0" promptText="رقم النسخة" unFocusColor="#a67c52">
+                                                         <HBox.margin>
+                                                            <Insets left="-31.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Gurmukhi MN" size="17.0" />
+                                                         </font>
+                                                      </JFXTextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <Pane prefHeight="120.0" prefWidth="719.0" styleClass="pane">
+                                       <children>
+                                          <VBox alignment="CENTER" layoutX="-5.0" layoutY="15.0" prefHeight="98.0" prefWidth="748.0">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="120.0" prefWidth="200.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="98.0" prefWidth="339.0">
+                                                         <HBox.margin>
+                                                            <Insets left="-62.0" right="31.0" />
+                                                         </HBox.margin>
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT">
+                                                               <children>
+                                                                  <Label fx:id="nomAdherent" text="إسم العضو" textFill="#402312">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="21.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label fx:id="telephoneAdherent" layoutX="27.0" layoutY="28.0" text="رقم الهاتف" textFill="#402312">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="21.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label fx:id="specialiteAdherent" layoutX="29.0" layoutY="42.0" text="المهنة" textFill="#402312">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="21.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <JFXTextField fx:id="idAdherent" focusColor="#402312" labelFloat="true" onAction="#remplirFormulaireAdherent" onKeyPressed="#just_number" onKeyReleased="#viderFormulaireAdherent" prefHeight="27.0" prefWidth="315.0" promptText="رقم العضو" unFocusColor="#a67c52">
+                                                         <HBox.margin>
+                                                            <Insets left="-31.0" />
+                                                         </HBox.margin>
+                                                         <font>
+                                                            <Font name="Gurmukhi MN" size="17.0" />
+                                                         </font>
+                                                      </JFXTextField>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </Pane>
+                                    <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#emprunter" prefHeight="59.0" prefWidth="194.0" style="-fx-background-color: #a67c52#a67c52;" text="إ قراض" textAlignment="CENTER" textFill="#f2f2f2">
+                                       <font>
+                                          <Font name="Calibri" size="28.0" />
+                                       </font>
+                                    </JFXButton>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+                  <Tab text="تجديد / الإرجاع">
+                     <content>
+                        <AnchorPane>
+                           <children>
+                              <BorderPane prefHeight="633.0" prefWidth="870.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <center>
+                                    <VBox alignment="TOP_CENTER" prefHeight="579.0" prefWidth="884.0" spacing="100.0">
+                                       <children>
+                                          <JFXTextField fx:id="idDocumentExemplaire" focusColor="#402312" labelFloat="true" onAction="#remplirFormulaireRendre" onKeyPressed="#just_number" onKeyReleased="#viderFormulaireRendre" promptText="تحديد النسخة (رقم النسخة-رقم الوثيقة)" unFocusColor="#a67c52" VBox.vgrow="ALWAYS">
+                                             <VBox.margin>
+                                                <Insets left="150.0" right="150.0" top="25.0" />
+                                             </VBox.margin>
+                                             <font>
+                                                <Font name="Gurmukhi Sangam MN" size="19.0" />
+                                             </font>
+                                          </JFXTextField>
+                                          <VBox prefHeight="224.0" prefWidth="748.0" styleClass="pane">
+                                             <children>
+                                                <HBox alignment="CENTER" prefHeight="222.0" prefWidth="748.0">
+                                                   <children>
+                                                      <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="346.0">
+                                                         <HBox.margin>
+                                                            <Insets />
+                                                         </HBox.margin>
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT">
+                                                               <children>
+                                                                  <Label text="إسم الوثيقة  :" textFill="#402312">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="21.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label layoutX="10.0" layoutY="20.0" text="تخصص :" textFill="#402312">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="21.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label text="موقع النسخة  :" textFill="#402312">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="21.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label text="رقم في الفئة  :" textFill="#402312">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="21.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label layoutX="10.0" layoutY="21.0" text="إسم العضو  :" textFill="#402312">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="21.0" />
+                                                                     </font>
+                                                                     <VBox.margin>
+                                                                        <Insets top="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                                  <Label layoutX="10.0" layoutY="47.0" text="رقم الهاتف  :" textFill="#402312">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="21.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <Label layoutX="10.0" layoutY="73.0" text="المهنة  :" textFill="#402312">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="21.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                               </children>
+                                                               <HBox.margin>
+                                                                  <Insets left="5.0" />
+                                                               </HBox.margin>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <VBox>
+                                                         <HBox.margin>
+                                                            <Insets left="-31.0" />
+                                                         </HBox.margin>
+                                                         <children>
+                                                            <Label fx:id="rendreTitre" text="...................." textFill="#402312">
+                                                               <font>
+                                                                  <Font name="Calibri" size="21.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="rendreNomCategorie" layoutX="10.0" layoutY="20.0" text="...................." textFill="#402312">
+                                                               <font>
+                                                                  <Font name="Calibri" size="21.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="rendreEmplacement" text="...................." textFill="#402312">
+                                                               <font>
+                                                                  <Font name="Calibri" size="21.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="rendreNumCategorie" text="...................." textFill="#402312">
+                                                               <font>
+                                                                  <Font name="Calibri" size="21.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="rendreNomPrenom" layoutX="10.0" layoutY="10.0" text="...................." textFill="#402312">
+                                                               <font>
+                                                                  <Font name="Calibri" size="21.0" />
+                                                               </font>
+                                                               <VBox.margin>
+                                                                  <Insets top="20.0" />
+                                                               </VBox.margin>
+                                                            </Label>
+                                                            <Label fx:id="rendreTelephone" layoutX="10.0" layoutY="36.0" text="...................." textFill="#402312">
+                                                               <font>
+                                                                  <Font name="Calibri" size="21.0" />
+                                                               </font>
+                                                            </Label>
+                                                            <Label fx:id="rendreSpecialite" layoutX="10.0" layoutY="62.0" text="...................." textFill="#402312">
+                                                               <font>
+                                                                  <Font name="Calibri" size="21.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                          <HBox alignment="CENTER">
+                                             <children>
+                                                <JFXButton buttonType="RAISED" contentDisplay="TOP" onAction="#renouveler" prefHeight="59.0" prefWidth="194.0" style="-fx-background-color: #a67c52#a67c52;" text="تجديد" textAlignment="CENTER" textFill="#f2f2f2">
+                                                   <font>
+                                                      <Font name="Calibri" size="28.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets right="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                                <JFXButton buttonType="RAISED" contentDisplay="TOP" layoutX="297.0" layoutY="10.0" onAction="#rendre" prefHeight="59.0" prefWidth="194.0" style="-fx-background-color: #a67c52#a67c52;" text="الإرجاع" textAlignment="CENTER" textFill="#f2f2f2">
+                                                   <font>
+                                                      <Font name="Calibri" size="28.0" />
+                                                   </font>
+                                                   <HBox.margin>
+                                                      <Insets left="10.0" />
+                                                   </HBox.margin>
+                                                </JFXButton>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </center>
+                              </BorderPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </center>
+         <top>
+            <MenuBar BorderPane.alignment="CENTER" />
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="702.0" prefWidth="1032.0" style="-fx-background-color: #CCCCCC;" stylesheets="@../css/DarHaditCss.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="darhadit.DocumentEmprunts.DocumentEmpruntsController">
+   <children>
+      <BorderPane prefHeight="607.0" prefWidth="777.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane>
+               <children>
+                  <VBox layoutX="821.0" nodeOrientation="RIGHT_TO_LEFT" prefHeight="534.0" prefWidth="821.0" spacing="20.0" styleClass="paneMain" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER">
+                           <children>
+                              <ImageView fitHeight="33.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8-view_file_filled.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="4.0" top="22.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <JFXTextField fx:id="recherche" focusColor="#a67c52" onKeyReleased="#rechercheEmprunts" prefHeight="32.0" prefWidth="357.0" promptText="بحث" unFocusColor="#402312">
+                                 <font>
+                                    <Font name="Franklin Gothic Book" size="17.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="11.0" top="20.0" />
+                                 </HBox.margin>
+                              </JFXTextField>
+                           </children>
+                        </HBox>
+                        <TableView fx:id="tableView" VBox.vgrow="ALWAYS">
+                           <columns>
+                              <TableColumn fx:id="numDocumentCol" maxWidth="100.0" minWidth="100.0" prefWidth="100.0" text="رقم الوثيقة" />
+                              <TableColumn fx:id="numExemplaireCol" maxWidth="100.0" minWidth="90.0" prefWidth="100.0" text="رقم النسخة" />
+                              <TableColumn fx:id="titreDocumentCol" maxWidth="300.0" minWidth="120.0" prefWidth="-1.0" text="عنوان الوثيقة" />
+                              <TableColumn fx:id="numAdherentCol" maxWidth="100.0" minWidth="90.0" prefWidth="-1.0" text="رقم العضو" />
+                              <TableColumn fx:id="prenomAdherentCol" maxWidth="100.0" minWidth="50.0" prefWidth="-1.0" text="الاسم" />
+                              <TableColumn fx:id="nomAdherentCol" maxWidth="100.0" minWidth="50.0" prefWidth="-1.0" text="اللقب" />
+                              <TableColumn fx:id="telephoneAdherentCol" maxWidth="100.0" minWidth="90.0" prefWidth="-1.0" text="رقم الهاتف" />
+                              <TableColumn fx:id="emailAdherentCol" maxWidth="300.0" minWidth="100.0" prefWidth="-1.0" text="العنوان الاكتروني" />
+                              <TableColumn fx:id="joursCol" maxWidth="150.0" minWidth="50.0" prefWidth="-1.0" text="المدة المتبقية" />
+                           </columns>
+                           <columnResizePolicy>
+                              <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+                           </columnResizePolicy>
+                        </TableView>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <AnchorPane>
+               <children>
+                  <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="43.0" prefWidth="230.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="TOP" nodeOrientation="RIGHT_TO_LEFT" text="الوثائق الصادرة" textFill="#402312">
+                                 <font>
+                                    <Font name="Calibri" size="30.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets left="10.0" right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="42.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8-to_do_filled.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <JFXButton onAction="#backToDash" onMouseClicked="#backToDash" prefHeight="54.0" prefWidth="133.0" text="رجوع" textFill="#5b0c0c">
+                           <graphic>
+                              <ImageView fitHeight="44.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8-circled_chevron_left_filled.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Calibri" size="24.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="51.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/dar.png" />
+                           </image>
+                        </ImageView>
+                        <Label text="مكتبة دار الحديث" textFill="#402312">
+                           <font>
+                              <Font name="Calibri" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>

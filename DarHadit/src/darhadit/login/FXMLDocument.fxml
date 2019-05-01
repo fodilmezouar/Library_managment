@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.BoxBlur?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane nodeOrientation="LEFT_TO_RIGHT" prefHeight="469.0" prefWidth="700.0" style="-fx-background-color: #CCCCCC;" stylesheets="@../css/DarHaditCss.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="darhadit.login.FXMLDocumentController">
+   <effect>
+      <BoxBlur height="0.0" width="0.0" />
+   </effect>
+   <children>
+      <ImageView fitHeight="469.0" fitWidth="400.0" layoutX="-1.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/bookk.png" />
+         </image>
+      </ImageView>
+      <Pane cache="true" cacheHint="SCALE" layoutX="419.0" layoutY="40.0" prefHeight="389.0" prefWidth="256.0" styleClass="pane">
+         <children>
+            <Label layoutX="69.0" layoutY="76.0" prefHeight="26.0" text="مكتبة  دار الحديث" textFill="#402312">
+               <font>
+                  <Font name="Franklin Gothic Book" size="19.0" />
+               </font>
+            </Label>
+            <JFXPasswordField fx:id="password" alignment="CENTER_RIGHT" focusColor="#a67c52" layoutX="27.0" layoutY="193.0" onKeyPressed="#KeyLoad" prefHeight="39.0" prefWidth="161.0" promptText="كلمة السر" styleClass="text-input" unFocusColor="#402312">
+               <font>
+                  <Font name="Didot" size="17.0" />
+               </font>
+            </JFXPasswordField>
+            <ImageView fitHeight="36.0" fitWidth="34.0" layoutX="193.0" layoutY="196.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/key-with-padlock.png" />
+               </image>
+            </ImageView>
+            <JFXButton layoutX="70.0" layoutY="276.0" onAction="#handleLoginAction" prefHeight="36.0" style="-fx-background-color: #402312#402312;" text="تسجيل الدخول" textFill="WHITE">
+               <font>
+                  <Font name="Bodoni 72 Book" size="18.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="54.0" fitWidth="106.0" layoutX="75.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/dar.png" />
+               </image>
+            </ImageView>
+            <Hyperlink layoutX="74.0" layoutY="241.0" onMouseClicked="#envoyer_mail" text="نسيت كلمة المرور؟" textFill="#4d0b0b">
+               <font>
+                  <Font name="Calibri" size="16.0" />
+               </font>
+            </Hyperlink>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="702.0" prefWidth="1034.0" style="-fx-background-color: #CCCCCC;" stylesheets="@../css/DarHaditCss.css" xmlns="http://javafx.com/javafx/9" xmlns:fx="http://javafx.com/fxml/1" fx:controller="darhadit.addDocument.AddDocumentController">
+   <children>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane>
+               <children>
+                  <VBox AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <HBox alignment="CENTER" prefHeight="43.0" prefWidth="230.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="TOP" nodeOrientation="RIGHT_TO_LEFT" text="إضافة مستند" textFill="#402312">
+                                 <font>
+                                    <Font name="Calibri" size="33.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets right="10.0" />
+                                 </HBox.margin>
+                              </Label>
+                              <ImageView fitHeight="42.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8-add_book.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </HBox>
+                        <JFXButton fx:id="back" onAction="#backToDash" onMouseClicked="#backToDash" prefHeight="54.0" prefWidth="133.0" text="رجوع" textFill="#5b0c0c">
+                           <graphic>
+                              <ImageView fitHeight="44.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../images/icons8-circled_chevron_left_filled.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <font>
+                              <Font name="Calibri" size="24.0" />
+                           </font>
+                        </JFXButton>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <ImageView fitHeight="51.0" fitWidth="86.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/dar.png" />
+                           </image>
+                        </ImageView>
+                        <Label prefHeight="39.0" text="مكتبة دار الحديث" textFill="#402312">
+                           <font>
+                              <Font name="Calibri" size="17.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </top>
+         <center>
+            <AnchorPane BorderPane.alignment="CENTER">
+               <children>
+                  <JFXTabPane fx:id="PanGlobale" layoutX="817.0" nodeOrientation="RIGHT_TO_LEFT" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <tabs>
+                        <Tab fx:id="pan1" text="إضافة وثيقة">
+                           <content>
+                              <StackPane prefHeight="150.0" prefWidth="200.0">
+                                 <children>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <center>
+                                          <VBox prefHeight="396.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <AnchorPane style="-fx-background-color: #fff;" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <AnchorPane prefHeight="395.0" prefWidth="539.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                         <children>
+                                                            <VBox alignment="CENTER" prefHeight="391.0" prefWidth="539.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                               <children>
+                                                                  <HBox prefHeight="100.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="154.0" text="رقم الوثيقة  " textFill="#402312">
+                                                                           <font>
+                                                                              <Font name="Calibri" size="22.0" />
+                                                                           </font>
+                                                                           <HBox.margin>
+                                                                              <Insets />
+                                                                           </HBox.margin>
+                                                                        </Label>
+                                                                        <JFXTextField fx:id="num" alignment="CENTER" editable="false" focusColor="#402312" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="290.0" promptText="رقم الوثيقة" unFocusColor="#a67c52">
+                                                                           <HBox.margin>
+                                                                              <Insets left="40.0" />
+                                                                           </HBox.margin>
+                                                                           <font>
+                                                                              <Font size="18.0" />
+                                                                           </font>
+                                                                        </JFXTextField>
+                                                                     </children>
+                                                                     <VBox.margin>
+                                                                        <Insets top="7.0" />
+                                                                     </VBox.margin>
+                                                                  </HBox>
+                                                                  <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="154.0" text="عنوان الوثيقة" textFill="#402312">
+                                                                           <font>
+                                                                              <Font name="Calibri" size="22.0" />
+                                                                           </font>
+                                                                           <HBox.margin>
+                                                                              <Insets />
+                                                                           </HBox.margin>
+                                                                        </Label>
+                                                                        <JFXTextField fx:id="titre" alignment="CENTER" focusColor="#402312" prefHeight="40.0" prefWidth="290.0" promptText="عنوان الوثيقة" unFocusColor="#a67c52">
+                                                                           <HBox.margin>
+                                                                              <Insets left="40.0" />
+                                                                           </HBox.margin>
+                                                                           <font>
+                                                                              <Font size="18.0" />
+                                                                           </font>
+                                                                        </JFXTextField>
+                                                                     </children>
+                                                                  </HBox>
+                                                                  <HBox layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="154.0" text="مؤلف          " textFill="#402312">
+                                                                           <font>
+                                                                              <Font name="Calibri" size="22.0" />
+                                                                           </font>
+                                                                           <HBox.margin>
+                                                                              <Insets />
+                                                                           </HBox.margin>
+                                                                        </Label>
+                                                                        <JFXTextField fx:id="auteur" alignment="CENTER" focusColor="#402312" prefHeight="40.0" prefWidth="290.0" promptText="مؤلف" unFocusColor="#a67c52">
+                                                                           <HBox.margin>
+                                                                              <Insets left="40.0" />
+                                                                           </HBox.margin>
+                                                                           <font>
+                                                                              <Font size="18.0" />
+                                                                           </font>
+                                                                        </JFXTextField>
+                                                                     </children>
+                                                                  </HBox>
+                                                                  <HBox layoutX="10.0" layoutY="186.0" prefHeight="100.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="154.0" text="دار النشر     " textFill="#402312">
+                                                                           <font>
+                                                                              <Font name="Calibri" size="22.0" />
+                                                                           </font>
+                                                                           <HBox.margin>
+                                                                              <Insets />
+                                                                           </HBox.margin>
+                                                                        </Label>
+                                                                        <JFXTextField fx:id="maison_ed" alignment="CENTER" focusColor="#402312" prefHeight="40.0" prefWidth="290.0" promptText="الناشر" unFocusColor="#a67c52">
+                                                                           <HBox.margin>
+                                                                              <Insets left="40.0" />
+                                                                           </HBox.margin>
+                                                                           <font>
+                                                                              <Font size="18.0" />
+                                                                           </font>
+                                                                        </JFXTextField>
+                                                                     </children>
+                                                                  </HBox>
+                                                                  <HBox prefHeight="100.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="198.0" text="تخصص               " textFill="#402312">
+                                                                           <font>
+                                                                              <Font name="Calibri" size="22.0" />
+                                                                           </font>
+                                                                           <HBox.margin>
+                                                                              <Insets />
+                                                                           </HBox.margin>
+                                                                        </Label>
+                                                                        <JFXComboBox fx:id="comb2" accessibleText="sdcsd" focusColor="#402312" nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="160.0" promptText="تخصص    " styleClass="Combo-Box" unFocusColor="#a67c52">
+                                                                           <HBox.margin>
+                                                                              <Insets />
+                                                                           </HBox.margin>
+                                                                           <contextMenu>
+                                                                              <ContextMenu>
+                                                                                <items>
+                                                                                  <MenuItem mnemonicParsing="false" onAction="#plusCategorie" text="اضافة تخصص" />
+                                                                                    <MenuItem mnemonicParsing="false" onAction="#modiferCateButton" text="تغيير تخصص" />
+                                                                                    <MenuItem mnemonicParsing="false" onAction="#moincategorie" text="حذف تخصص " />
+                                                                                </items>
+                                                                              </ContextMenu>
+                                                                           </contextMenu>
+                                                                        </JFXComboBox>
+                                                                        <Label fx:id="image_aide" prefHeight="25.0" prefWidth="25.0">
+                                                                           <HBox.margin>
+                                                                              <Insets left="15.0" top="10.0" />
+                                                                           </HBox.margin>
+                                                                        </Label>
+                                                                     </children>
+                                                                  </HBox>
+                                                                  <HBox layoutX="10.0" layoutY="144.0" prefHeight="100.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="198.0" text="نوع المستند           " textFill="#402312">
+                                                                           <font>
+                                                                              <Font name="Calibri" size="22.0" />
+                                                                           </font>
+                                                                           <HBox.margin>
+                                                                              <Insets />
+                                                                           </HBox.margin>
+                                                                        </Label>
+                                                                        <JFXComboBox fx:id="comb1" focusColor="#402312" nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="160.0" promptText="نوع المستند  " styleClass="Combo-Box" unFocusColor="#a67c52">
+                                                                           <HBox.margin>
+                                                                              <Insets />
+                                                                           </HBox.margin>
+                                                                        </JFXComboBox>
+                                                                     </children>
+                                                                  </HBox>
+                                                                  <HBox alignment="BOTTOM_LEFT" prefHeight="63.0" prefWidth="475.0">
+                                                                     <children>
+                                                                        <JFXRadioButton fx:id="radio2" nodeOrientation="RIGHT_TO_LEFT" onAction="#radio_button2" selected="true" text="سلسلة" textFill="#402312">
+                                                                           <HBox.margin>
+                                                                              <Insets left="50.0" />
+                                                                           </HBox.margin>
+                                                                           <font>
+                                                                              <Font name="Calibri" size="22.0" />
+                                                                           </font>
+                                                                        </JFXRadioButton>
+                                                                        <JFXRadioButton fx:id="radio1" depthTest="DISABLE" nodeOrientation="RIGHT_TO_LEFT" onAction="#radio_button1" text="ليست سلسلة" textFill="#402312">
+                                                                           <HBox.margin>
+                                                                              <Insets left="80.0" />
+                                                                           </HBox.margin>
+                                                                           <font>
+                                                                              <Font name="Calibri" size="22.0" />
+                                                                           </font>
+                                                                        </JFXRadioButton>
+                                                                     </children>
+                                                                     <VBox.margin>
+                                                                        <Insets left="10.0" top="2.0" />
+                                                                     </VBox.margin>
+                                                                  </HBox>
+                                                                  <HBox layoutX="10.0" layoutY="388.0" prefHeight="100.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <Label alignment="CENTER" prefHeight="40.0" prefWidth="154.0" text="الجزء          " textFill="#402312">
+                                                                           <font>
+                                                                              <Font name="Calibri" size="22.0" />
+                                                                           </font>
+                                                                           <HBox.margin>
+                                                                              <Insets />
+                                                                           </HBox.margin>
+                                                                        </Label>
+                                                                        <JFXTextField fx:id="partie" alignment="CENTER" focusColor="#402312" onKeyPressed="#just_number" prefHeight="40.0" prefWidth="290.0" promptText="الجزء" unFocusColor="#a67c52">
+                                                                           <HBox.margin>
+                                                                              <Insets left="40.0" />
+                                                                           </HBox.margin>
+                                                                           <font>
+                                                                              <Font size="18.0" />
+                                                                           </font>
+                                                                        </JFXTextField>
+                                                                     </children>
+                                                                  </HBox>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </AnchorPane>
+                                                      <VBox layoutX="502.0" layoutY="70.0" AnchorPane.bottomAnchor="81.0" AnchorPane.leftAnchor="502.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="70.0">
+                                                         <children>
+                                                            <VBox alignment="CENTER" styleClass="pane" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label fx:id="label_sommaire_mot_cle" alignment="CENTER" contentDisplay="CENTER" text="الفهرسة" textFill="#402312" VBox.vgrow="ALWAYS">
+                                                                     <font>
+                                                                        <Font name="Calibri" size="22.0" />
+                                                                     </font>
+                                                                  </Label>
+                                                                  <JFXTextArea fx:id="sommaire" focusColor="#402312" prefHeight="222.0" prefWidth="305.0" unFocusColor="#a67c52" VBox.vgrow="ALWAYS">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                  </JFXTextArea>
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <JFXRadioButton fx:id="radio5" layoutX="530.0" layoutY="23.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#radio_button5" selected="true" text="الفهرسة" textFill="#402312">
+                                                         <font>
+                                                            <Font name="Calibri" size="22.0" />
+                                                         </font>
+                                                      </JFXRadioButton>
+                                                      <JFXRadioButton fx:id="radio6" depthTest="DISABLE" layoutX="709.0" layoutY="23.0" nodeOrientation="RIGHT_TO_LEFT" onAction="#radio_button6" text="الكلمات مفتاحية" textFill="#402312">
+                                                         <font>
+                                                            <Font name="Calibri" size="22.0" />
+                                                         </font>
+                                                      </JFXRadioButton>
+                                                   </children>
+                                                </AnchorPane>
+                                             </children>
+                                          </VBox>
+                                       </center>
+                                       <bottom>
+                                          <AnchorPane BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label alignment="CENTER" prefHeight="55.0" prefWidth="171.0" text="مكتبة دار الحديث" textFill="#402312" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                   <font>
+                                                      <Font name="Calibri" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox prefHeight="17.0" prefWidth="817.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <JFXButton fx:id="saveButton1" contentDisplay="TOP" onAction="#addDocument" prefHeight="69.0" prefWidth="178.0" text="إضافة" textFill="#46290d">
+                                                         <font>
+                                                            <Font name="Calibri" size="25.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <ImageView fitHeight="28.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../images/icons8-add_book.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="cancelButton1" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" onAction="#cancelDocument" prefHeight="74.0" prefWidth="182.0" text="إلغاء" textFill="#46290d">
+                                                         <font>
+                                                            <Font name="Calibri" size="25.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../images/icons8-cancel_filled.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <HBox.margin>
+                                                            <Insets left="80.0" />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </bottom>
+                                    </BorderPane>
+                                 </children>
+                              </StackPane>
+                           </content>
+                        </Tab>
+                        <Tab fx:id="pan2" text="إضافة نسخة">
+                           <content>
+                              <StackPane prefHeight="150.0" prefWidth="200.0" />
+                           </content>
+                           <content>
+                              <BorderPane prefHeight="200.0" prefWidth="200.0" />
+                           </content>
+                           <content>
+                              <StackPane prefHeight="150.0" prefWidth="200.0">
+                                 <children>
+                                    <BorderPane prefHeight="200.0" prefWidth="200.0">
+                                       <left>
+                                          <AnchorPane prefHeight="400.0" prefWidth="548.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <VBox alignment="CENTER" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <HBox prefHeight="100.0" prefWidth="484.0">
+                                                         <children>
+                                                            <Label alignment="CENTER" prefHeight="40.0" prefWidth="154.0" text="رقم الوثيقة" textFill="#402312">
+                                                               <font>
+                                                                  <Font name="Calibri" size="22.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <JFXTextField fx:id="num_doc" alignment="CENTER" focusColor="#402312" onAction="#remlire_info" onKeyPressed="#remlire_info_v2" prefHeight="40.0" prefWidth="244.0" promptText="رقم الوثيقة" unFocusColor="#a67c52">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets top="7.0" />
+                                                         </VBox.margin>
+                                                      </HBox>
+                                                      <HBox layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label alignment="CENTER" prefHeight="40.0" prefWidth="154.0" text="رقم النسخة" textFill="#402312">
+                                                               <font>
+                                                                  <Font name="Calibri" size="22.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <JFXTextField fx:id="num_exem" alignment="CENTER" editable="false" focusColor="#402312" prefHeight="40.0" prefWidth="244.0" promptText="رقم النسخة" unFocusColor="#a67c52">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label alignment="CENTER" prefHeight="40.0" prefWidth="154.0" text="موقع الوثيقة" textFill="#402312">
+                                                               <font>
+                                                                  <Font name="Calibri" size="22.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <JFXTextField fx:id="emplacement" alignment="CENTER" focusColor="#402312" prefHeight="40.0" prefWidth="244.0" promptText="موقع الوثيقة" unFocusColor="#a67c52">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="10.0" layoutY="162.0" prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label alignment="CENTER" prefHeight="40.0" prefWidth="154.0" text="رقم في الفئة" textFill="#402312">
+                                                               <font>
+                                                                  <Font name="Calibri" size="22.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <JFXTextField fx:id="emplacement2" alignment="CENTER" focusColor="#402312" prefHeight="40.0" prefWidth="244.0" promptText="رقم الفئة" unFocusColor="#a67c52">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="10.0" layoutY="186.0" prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label alignment="CENTER" prefHeight="40.0" prefWidth="154.0" text="مصدر الوثيقة" textFill="#402312">
+                                                               <font>
+                                                                  <Font name="Calibri" size="22.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <JFXTextField fx:id="source" alignment="CENTER" focusColor="#402312" prefHeight="40.0" prefWidth="244.0" promptText="مصدر الوثيقة" unFocusColor="#a67c52">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label alignment="CENTER" prefHeight="40.0" prefWidth="154.0" text="سعر الوثيقة  " textFill="#402312">
+                                                               <font>
+                                                                  <Font name="Calibri" size="22.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <JFXTextField fx:id="prix" alignment="CENTER" focusColor="#402312" onKeyPressed="#just_number_prix" prefHeight="40.0" prefWidth="244.0" promptText="سعر الوثيقة" unFocusColor="#a67c52">
+                                                               <HBox.margin>
+                                                                  <Insets />
+                                                               </HBox.margin>
+                                                               <font>
+                                                                  <Font size="18.0" />
+                                                               </font>
+                                                            </JFXTextField>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox layoutX="10.0" layoutY="144.0" prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <Label alignment="CENTER" prefHeight="40.0" prefWidth="154.0" text="أصل النسخة" textFill="#402312">
+                                                               <font>
+                                                                  <Font name="Calibri" size="22.0" />
+                                                               </font>
+                                                               <HBox.margin>
+                                                                  <Insets left="-8.0" />
+                                                               </HBox.margin>
+                                                            </Label>
+                                                            <JFXComboBox fx:id="comb3" focusColor="#402312" nodeOrientation="LEFT_TO_RIGHT" prefHeight="33.0" prefWidth="160.0" promptText="أصل النسخة " styleClass="Combo-Box" unFocusColor="#a67c52">
+                                                               <HBox.margin>
+                                                                  <Insets left="10.0" />
+                                                               </HBox.margin>
+                                                            </JFXComboBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox prefHeight="63.0" prefWidth="800.0">
+                                                         <children>
+                                                            <JFXRadioButton fx:id="radio3" nodeOrientation="RIGHT_TO_LEFT" onAction="#radio_button3" selected="true" text="للإعارة" textFill="#402312">
+                                                               <HBox.margin>
+                                                                  <Insets left="47.0" />
+                                                               </HBox.margin>
+                                                               <font>
+                                                                  <Font name="Calibri" size="22.0" />
+                                                               </font>
+                                                            </JFXRadioButton>
+                                                            <JFXRadioButton fx:id="radio4" depthTest="DISABLE" nodeOrientation="RIGHT_TO_LEFT" onAction="#radio_button4" text="ليست للإعارة" textFill="#402312">
+                                                               <HBox.margin>
+                                                                  <Insets left="117.0" />
+                                                               </HBox.margin>
+                                                               <font>
+                                                                  <Font name="Calibri" size="22.0" />
+                                                               </font>
+                                                            </JFXRadioButton>
+                                                         </children>
+                                                         <VBox.margin>
+                                                            <Insets left="10.0" top="2.0" />
+                                                         </VBox.margin>
+                                                      </HBox>
+                                                   </children>
+                                                   <padding>
+                                                      <Insets top="5.0" />
+                                                   </padding>
+                                                </VBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </left>
+                                       <bottom>
+                                          <AnchorPane BorderPane.alignment="CENTER">
+                                             <children>
+                                                <Label prefHeight="55.0" prefWidth="140.0" text="مكتبة دار الحديث" textFill="#402312" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                                   <font>
+                                                      <Font name="Diwani Outline Shaded" size="20.0" />
+                                                   </font>
+                                                </Label>
+                                                <HBox prefHeight="17.0" prefWidth="817.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                                   <children>
+                                                      <JFXButton fx:id="saveButton" contentDisplay="TOP" onAction="#add_exemplaire" prefHeight="69.0" prefWidth="178.0" text="إضافة" textFill="#46290d">
+                                                         <font>
+                                                            <Font name="Calibri" size="25.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <ImageView fitHeight="28.0" fitWidth="21.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../images/icons8-add_book.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </JFXButton>
+                                                      <JFXButton fx:id="cancelButton" contentDisplay="TOP" layoutX="10.0" layoutY="10.0" onAction="#cancelExemplaire" prefHeight="74.0" prefWidth="182.0" text="إلغاء" textFill="#46290d">
+                                                         <font>
+                                                            <Font name="Calibri" size="25.0" />
+                                                         </font>
+                                                         <graphic>
+                                                            <ImageView fitHeight="30.0" fitWidth="26.0" pickOnBounds="true" preserveRatio="true">
+                                                               <image>
+                                                                  <Image url="@../images/icons8-cancel_filled.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <HBox.margin>
+                                                            <Insets left="80.0" />
+                                                         </HBox.margin>
+                                                      </JFXButton>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </AnchorPane>
+                                       </bottom>
+                                       <center>
+                                          <VBox alignment="CENTER" prefHeight="400.0" prefWidth="310.0" BorderPane.alignment="CENTER">
+                                             <children>
+                                                <VBox alignment="CENTER" style="-fx-background-color: #FFF;" styleClass="jfx-tab-pane" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <Label fx:id="titre_doc" alignment="CENTER" prefHeight="31.0" text="عنوان الوثيقة" textFill="#402312" VBox.vgrow="ALWAYS">
+                                                         <font>
+                                                            <Font name="Calibri Bold" size="27.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets right="100.0" top="25.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label fx:id="auteur_doc" alignment="CENTER" prefWidth="244.0" text="مؤلف" textFill="#402312" VBox.vgrow="ALWAYS">
+                                                         <font>
+                                                            <Font name="Calibri Bold" size="27.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets right="100.0" top="25.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                      <Label fx:id="specialite_doc" alignment="CENTER" layoutX="67.0" layoutY="153.0" prefWidth="244.0" text="تخصص" textFill="#402312" VBox.vgrow="ALWAYS">
+                                                         <font>
+                                                            <Font name="Calibri Bold" size="27.0" />
+                                                         </font>
+                                                         <VBox.margin>
+                                                            <Insets right="100.0" top="25.0" />
+                                                         </VBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                   <VBox.margin>
+                                                      <Insets />
+                                                   </VBox.margin>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </center>
+                                    </BorderPane>
+                                 </children>
+                              </StackPane>
+                           </content>
+                        </Tab>
+                     </tabs>
+                  </JFXTabPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

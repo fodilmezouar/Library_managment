@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="rootPane" prefHeight="400.0" prefWidth="400.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="darhadit.Setting.SettingFXMLController">
+    <stylesheets>
+        <URL value="@settingfxml.css" />
+    </stylesheets>
+   <children>
+      <VBox layoutX="83.0" layoutY="75.0" prefHeight="325.0" prefWidth="400.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Label prefHeight="63.0" prefWidth="340.0" text="Vérifier les information pour connecter  à la Base De Donnée" wrapText="true">
+               <VBox.margin>
+                  <Insets bottom="30.0" left="40.0" right="20.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font name="Calibri Bold" size="18.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="port" labelFloat="true" promptText="Port">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="30.0" right="30.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="username" labelFloat="true" promptText="Nom">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXTextField>
+            <JFXPasswordField fx:id="mdp" labelFloat="true" promptText="Mot de passe">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="30.0" right="30.0" top="20.0" />
+               </VBox.margin>
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </JFXPasswordField>
+         </children>
+      </VBox>
+      <HBox layoutX="75.0" layoutY="318.0" prefHeight="68.0" prefWidth="400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <JFXButton fx:id="ButtonAnnuler" onAction="#operationAnnuler" prefHeight="80.0" prefWidth="200.0" text="Annuler">
+               <font>
+                  <Font size="16.0" />
+               </font></JFXButton>
+            <JFXButton fx:id="ButtonOk" onAction="#operationOk" prefHeight="80.0" prefWidth="200.0" text="Ok">
+               <font>
+                  <Font size="16.0" />
+               </font></JFXButton>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
